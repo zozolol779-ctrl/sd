@@ -1,0 +1,67 @@
+{
+  "type": "bundle",
+  "id": "bundle--865f02ac-43c9-4e2c-a33a-3b81b37546a0",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "indicator",
+      "id": "indicator--61fc45be-36a9-4e09-ac04-4d61c98b24f4",
+      "created": "2025-08-21T04:57:11Z",
+      "modified": "2025-08-21T04:57:11Z",
+      "name": "Domain: 13.0",
+      "pattern_type": "stix",
+      "pattern": "[domain-name:value = '13.0']",
+      "valid_from": "2025-08-21T04:57:11Z"
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--587feb75-ac7d-4e02-afe0-8dea10073a91",
+      "created": "2025-08-21T04:57:11Z",
+      "modified": "2025-08-21T04:57:11Z",
+      "name": "Domain: facebook.com",
+      "pattern_type": "stix",
+      "pattern": "[domain-name:value = 'facebook.com']",
+      "valid_from": "2025-08-21T04:57:11Z"
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--632267cb-aac1-4635-89b0-ad70de219b4f",
+      "created": "2025-08-21T04:57:11Z",
+      "modified": "2025-08-21T04:57:11Z",
+      "name": "Domain: hotmail.com",
+      "pattern_type": "stix",
+      "pattern": "[domain-name:value = 'hotmail.com']",
+      "valid_from": "2025-08-21T04:57:11Z"
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--294c048a-56ee-4bac-ac88-32d66d37375a",
+      "created": "2025-08-21T04:57:11Z",
+      "modified": "2025-08-21T04:57:11Z",
+      "name": "URL: facebook.com/share/1Avq18k2Fi",
+      "pattern_type": "stix",
+      "pattern": "[url:value = 'facebook.com/share/1Avq18k2Fi']",
+      "valid_from": "2025-08-21T04:57:11Z"
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--ce688c33-ea43-4016-af14-c3b3aa6fa057",
+      "created": "2025-08-21T04:57:11Z",
+      "modified": "2025-08-21T04:57:11Z",
+      "name": "URL: facebook.com/share/1CYSrQYrbj/",
+      "pattern_type": "stix",
+      "pattern": "[url:value = 'facebook.com/share/1CYSrQYrbj/']",
+      "valid_from": "2025-08-21T04:57:11Z"
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--71e234a8-fe5d-4f79-b62d-feadfe149d83",
+      "created": "2025-08-21T04:57:11Z",
+      "modified": "2025-08-21T04:57:11Z",
+      "name": "URL: facebook.com/share/p/1A156v93XU",
+      "pattern_type": "stix",
+      "pattern": "[url:value = 'facebook.com/share/p/1A156v93XU']",
+      "valid_from": "2025-08-21T04:57:11Z"
+    }
+  ]
+}

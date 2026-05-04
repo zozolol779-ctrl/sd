@@ -1,0 +1,10 @@
+{
+  "zip_used": "New2.zip",
+  "extracted_to": "/mnt/data/extracted_new2",
+  "preferred_graph": "case_graph.graphml",
+  "csv_count": 2,
+  "graphml_count": 3,
+  "txt_count": 1,
+  "master_csv": "/mnt/data/master_entities_nodes.csv",
+  "enriched_graphml": "/mnt/data/shaimaa_graph_enriched_metrics.graphml"
+}

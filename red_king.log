@@ -1,0 +1,485 @@
+2026-01-16 06:50:32,636 - RED_KING_CORE - INFO - [*] NEO4J Not Configured: Using Local JSON Fallback
+2026-01-16 06:50:52,733 - RED_KING_CORE - WARNING - [-] WARNING: GEMINI_API_KEY not found. The Brain is lobotomized.
+2026-01-16 06:50:53,739 - RED_KING_CORE - INFO - [*] [BRAIN] Generating Sovereign Key for 2026-01-16...
+2026-01-16 06:50:54,975 - RED_KING_CORE - INFO - TEST_LOG_ENTRY: Direct Info Log
+2026-01-16 06:50:54,981 - RED_KING_CORE - ERROR - TEST_LOG_ENTRY: Direct Error Log
+2026-01-16 06:50:55,333 - RED_KING_CORE - INFO - GET /api/status - 200 - 115.72ms
+2026-01-16 06:50:55,361 - RED_KING_CORE - ERROR - Request Failed (ID: 560ccc3b): Intentional Crash for Testing
+Traceback (most recent call last):
+  File "/home/zozo/Red_King_C2/app/main.py", line 83, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "/home/zozo/Red_King_C2/verify_logging.py", line 23, in crash
+    raise ValueError("Intentional Crash for Testing")
+ValueError: Intentional Crash for Testing
+2026-01-16 06:50:55,648 - RED_KING_CORE - CRITICAL - FATAL ERROR: Intentional Crash for Testing
+Traceback (most recent call last):
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/app/main.py", line 83, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "/home/zozo/Red_King_C2/verify_logging.py", line 23, in crash
+    raise ValueError("Intentional Crash for Testing")
+ValueError: Intentional Crash for Testing
+2026-01-16 06:52:07,562 - RED_KING_CORE - INFO - [*] NEO4J Not Configured: Using Local JSON Fallback
+2026-01-16 06:52:19,401 - RED_KING_CORE - WARNING - [-] WARNING: GEMINI_API_KEY not found. The Brain is lobotomized.
+2026-01-16 06:52:19,569 - RED_KING_CORE - INFO - [*] [BRAIN] Generating Sovereign Key for 2026-01-16...
+2026-01-16 06:52:19,742 - RED_KING_CORE - INFO - TEST_LOG_ENTRY: Direct Info Log
+2026-01-16 06:52:19,761 - RED_KING_CORE - ERROR - TEST_LOG_ENTRY: Direct Error Log
+2026-01-16 06:52:19,800 - RED_KING_CORE - INFO - GET /api/status - 200 - 3.32ms
+2026-01-16 06:52:19,819 - RED_KING_CORE - ERROR - Request Failed (ID: 7c5ffbf7): Intentional Crash for Testing
+Traceback (most recent call last):
+  File "/home/zozo/Red_King_C2/app/main.py", line 83, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "/home/zozo/Red_King_C2/verify_logging.py", line 23, in crash
+    raise ValueError("Intentional Crash for Testing")
+ValueError: Intentional Crash for Testing
+2026-01-16 06:52:19,869 - RED_KING_CORE - CRITICAL - FATAL ERROR: Intentional Crash for Testing
+Traceback (most recent call last):
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/app/main.py", line 83, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "/home/zozo/Red_King_C2/verify_logging.py", line 23, in crash
+    raise ValueError("Intentional Crash for Testing")
+ValueError: Intentional Crash for Testing
+2026-01-16 07:10:25,622 - RED_KING_CORE - INFO - [*] NEO4J Not Configured: Using Local JSON Fallback
+2026-01-16 07:10:37,573 - RED_KING_CORE - WARNING - [-] WARNING: GEMINI_API_KEY not found. The Brain is lobotomized.
+2026-01-16 07:10:37,746 - RED_KING_CORE - INFO - [*] [BRAIN] Generating Sovereign Key for 2026-01-16...
+2026-01-16 07:10:38,280 - RED_KING_CORE - INFO - GET /api/status - 200 - 6.01ms
+2026-01-16 07:10:38,661 - RED_KING_CORE - INFO - POST /api/hive/checkin - 422 - 51.62ms
+2026-01-16 07:10:38,765 - RED_KING_CORE - INFO - [*] Improving Strategy: How to hack?
+2026-01-16 07:10:38,770 - RED_KING_CORE - ERROR - Request Failed (ID: 62cee351): object str can't be used in 'await' expression
+Traceback (most recent call last):
+  File "/home/zozo/Red_King_C2/app/main.py", line 83, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/app/main.py", line 771, in consult_hive_mind
+    answer = await hive_mind.get_strategic_advice(request.query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object str can't be used in 'await' expression
+2026-01-16 07:10:41,034 - RED_KING_CORE - CRITICAL - FATAL ERROR: object str can't be used in 'await' expression
+Traceback (most recent call last):
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/app/main.py", line 83, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/fastapi/routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/app/main.py", line 771, in consult_hive_mind
+    answer = await hive_mind.get_strategic_advice(request.query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object str can't be used in 'await' expression
+2026-01-16 07:10:44,850 - RED_KING_CORE - WARNING - [-] NEO4J CONNECTION FAILED: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 111] Connection refused)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused) (Using JSON Fallback)
+2026-01-16 07:10:44,885 - RED_KING_CORE - WARNING - [-] NEO4J CONNECTION FAILED: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 111] Connection refused)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused) (Using JSON Fallback)
+2026-01-16 07:12:13,567 - RED_KING_CORE - INFO - [*] NEO4J Not Configured: Using Local JSON Fallback
+2026-01-16 07:12:22,210 - RED_KING_CORE - WARNING - [-] WARNING: GEMINI_API_KEY not found. The Brain is lobotomized.
+2026-01-16 07:12:22,347 - RED_KING_CORE - INFO - [*] [BRAIN] Generating Sovereign Key for 2026-01-16...
+2026-01-16 07:12:23,088 - RED_KING_CORE - INFO - GET /api/status - 200 - 5.39ms
+2026-01-16 07:12:23,128 - RED_KING_CORE - ERROR - [!] Check-in Failed: Padding is incorrect.
+Traceback (most recent call last):
+  File "/home/zozo/Red_King_C2/app/main.py", line 449, in agent_checkin
+    decrypted_json = cipher_engine.decrypt(payload.data)
+  File "/home/zozo/Red_King_C2/app/core/red_cipher.py", line 26, in decrypt
+    return unpad(cipher.decrypt(cipher_text), AES.block_size).decode("utf-8")
+           ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zozo/Red_King_C2/venv/lib/python3.13/site-packages/Crypto/Util/Padding.py", line 98, in unpad
+    raise ValueError("Padding is incorrect.")
+ValueError: Padding is incorrect.
+2026-01-16 07:12:24,689 - RED_KING_CORE - INFO - POST /api/hive/checkin - 200 - 1564.78ms
+2026-01-16 07:12:25,093 - RED_KING_CORE - INFO - [*] Improving Strategy: How to hack?
+2026-01-16 07:12:25,099 - RED_KING_CORE - INFO - POST /api/consult - 200 - 13.20ms
+2026-01-16 07:12:25,158 - RED_KING_CORE - WARNING - [-] NEO4J CONNECTION FAILED: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 111] Connection refused)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused) (Using JSON Fallback)
+2026-01-16 07:12:25,210 - RED_KING_CORE - WARNING - [-] NEO4J CONNECTION FAILED: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 111] Connection refused)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused) (Using JSON Fallback)
+2026-01-16 07:13:31,793 - RED_KING_CORE - INFO - [*] NEO4J Not Configured: Using Local JSON Fallback
+2026-01-16 07:13:36,117 - RED_KING_CORE - WARNING - [-] WARNING: GEMINI_API_KEY not found. The Brain is lobotomized.
+2026-01-16 07:13:36,218 - RED_KING_CORE - INFO - [*] [BRAIN] Generating Sovereign Key for 2026-01-16...
+2026-01-16 07:13:36,650 - RED_KING_CORE - INFO - GET /api/status - 200 - 3.47ms
+2026-01-16 07:13:36,862 - RED_KING_CORE - ERROR - [!] Check-in Failed: AchievementEngine.evaluate() takes 1 positional argument but 3 were given
+Traceback (most recent call last):
+  File "/home/zozo/Red_King_C2/app/main.py", line 472, in agent_checkin
+    new_badges = achievement_engine.evaluate(agent_id, data)
+TypeError: AchievementEngine.evaluate() takes 1 positional argument but 3 were given
+2026-01-16 07:13:37,195 - RED_KING_CORE - INFO - POST /api/hive/checkin - 200 - 485.02ms
+2026-01-16 07:13:37,493 - RED_KING_CORE - INFO - [*] Improving Strategy: How to hack?
+2026-01-16 07:13:37,498 - RED_KING_CORE - INFO - POST /api/consult - 200 - 9.57ms
+2026-01-16 07:13:37,568 - RED_KING_CORE - WARNING - [-] NEO4J CONNECTION FAILED: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 111] Connection refused)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused) (Using JSON Fallback)
+2026-01-16 07:13:37,889 - RED_KING_CORE - WARNING - [-] NEO4J CONNECTION FAILED: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 111] Connection refused)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused) (Using JSON Fallback)
+2026-01-16 07:14:32,943 - RED_KING_CORE - INFO - [*] NEO4J Not Configured: Using Local JSON Fallback
+2026-01-16 07:14:38,447 - RED_KING_CORE - WARNING - [-] WARNING: GEMINI_API_KEY not found. The Brain is lobotomized.
+2026-01-16 07:14:38,581 - RED_KING_CORE - INFO - [*] [BRAIN] Generating Sovereign Key for 2026-01-16...
+2026-01-16 07:14:39,000 - RED_KING_CORE - INFO - GET /api/status - 200 - 4.28ms
+2026-01-16 07:14:39,069 - RED_KING_CORE - INFO - [*] Heartbeat: test_agent_full_flow
+2026-01-16 07:14:39,075 - RED_KING_CORE - INFO - POST /api/hive/checkin - 200 - 26.07ms
+2026-01-16 07:14:39,133 - RED_KING_CORE - INFO - [*] Improving Strategy: How to hack?
+2026-01-16 07:14:39,157 - RED_KING_CORE - INFO - POST /api/consult - 200 - 30.47ms
+2026-01-16 07:14:39,208 - RED_KING_CORE - WARNING - [-] NEO4J CONNECTION FAILED: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 111] Connection refused)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused) (Using JSON Fallback)
+2026-01-16 07:14:39,237 - RED_KING_CORE - WARNING - [-] NEO4J CONNECTION FAILED: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 111] Connection refused)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused) (Using JSON Fallback)
+2026-01-17 23:49:02,802 - RED_KING_CORE - INFO - [*] NEO4J Not Configured: Using Local JSON Fallback
+2026-01-17 23:49:09,412 - RED_KING_CORE - WARNING - [-] WARNING: GEMINI_API_KEY not found. The Brain is lobotomized.
+2026-01-17 23:49:11,271 - RED_KING_CORE - CRITICAL - CRITICAL SECURITY ERROR: SECRET_PASSPHRASE is not set. Halting.
+2026-01-18 14:13:14,466 - RED_KING_CORE - INFO - [*] NEO4J Not Configured: Using Local JSON Fallback
+2026-01-18 14:14:16,615 - RED_KING_CORE - INFO - [*] NEO4J Not Configured: Using Local JSON Fallback
+2026-01-18 14:15:22,059 - RED_KING_CORE - INFO - [*] NEO4J Not Configured: Using Local JSON Fallback
+2026-01-18 14:16:20,217 - RED_KING_CORE - INFO - [*] NEO4J Not Configured: Using Local JSON Fallback
+2026-01-18 14:16:25,884 - RED_KING_CORE - WARNING - [-] WARNING: GEMINI_API_KEY not found. The Brain is lobotomized.
+2026-01-18 14:16:28,790 - RED_KING_CORE - CRITICAL - CRITICAL SECURITY ERROR: SECRET_PASSPHRASE is not set. Halting.
+2026-01-18 21:46:24,011 - RED_KING_CORE - INFO - [*] NEO4J Not Configured: Using Local JSON Fallback
+2026-01-18 21:47:40,600 - RED_KING_CORE - INFO - [*] NEO4J Not Configured: Using Local JSON Fallback
+2026-01-18 21:47:47,345 - RED_KING_CORE - INFO - [+] Hive Mind Online: Connected to Gemini 2.0 Flash (Standard)
+2026-01-18 21:47:48,755 - RED_KING_CORE - INFO - [*] [BRAIN] Generating Sovereign Key for 2026-01-18...
+2026-01-18 22:10:10,454 - RED_KING_CORE - INFO - GET / - 200 - 1.54ms
+2026-01-18 22:10:11,150 - RED_KING_CORE - INFO - GET /favicon.ico - 404 - 0.59ms
+2026-01-18 22:17:23,097 - RED_KING_CORE - INFO - GET / - 200 - 1.02ms
+2026-01-18 22:21:08,260 - RED_KING_CORE - INFO - GET / - 200 - 0.79ms
+2026-01-18 22:25:23,427 - RED_KING_CORE - INFO - GET / - 200 - 0.79ms
+2026-01-18 22:25:26,934 - RED_KING_CORE - INFO - GET / - 200 - 0.62ms
+2026-01-18 22:25:28,221 - RED_KING_CORE - INFO - GET / - 200 - 2.23ms
+2026-01-18 22:25:28,450 - RED_KING_CORE - INFO - GET / - 200 - 0.80ms
+2026-01-18 22:25:28,644 - RED_KING_CORE - INFO - GET / - 200 - 0.64ms
+2026-01-18 22:25:28,865 - RED_KING_CORE - INFO - GET / - 200 - 0.77ms
+2026-01-18 22:25:29,222 - RED_KING_CORE - INFO - GET / - 200 - 1.30ms
+2026-01-18 22:28:33,954 - RED_KING_CORE - INFO - GET /dashboard - 404 - 0.46ms
+2026-01-18 22:36:22,377 - RED_KING_CORE - INFO - GET / - 200 - 0.85ms
+2026-01-18 22:44:53,748 - RED_KING_CORE - INFO - GET /static/index.html - 404 - 0.48ms
+2026-01-18 22:46:25,510 - RED_KING_CORE - INFO - GET /static/index.html - 404 - 0.37ms
+2026-01-18 22:49:14,081 - RED_KING_CORE - INFO - [*] NEO4J Not Configured: Using Local JSON Fallback
+2026-01-18 22:49:16,711 - RED_KING_CORE - INFO - [+] Hive Mind Online: Connected to Gemini 2.0 Flash (Standard)
+2026-01-18 22:49:16,773 - RED_KING_CORE - INFO - [*] [BRAIN] Generating Sovereign Key for 2026-01-18...
+2026-01-18 22:59:33,022 - RED_KING_CORE - INFO - GET / - 200 - 1.33ms
+2026-01-18 23:01:43,270 - RED_KING_CORE - INFO - GET /static/index.html - 404 - 0.54ms
+2026-01-18 23:06:22,763 - RED_KING_CORE - INFO - GET / - 200 - 0.94ms
+2026-01-20 00:44:02,563 - RED_KING_CORE - INFO - [*] NEO4J Not Configured: Using Local JSON Fallback

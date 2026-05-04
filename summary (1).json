@@ -1,0 +1,176 @@
+[
+  {
+    "file": "maltego_edges (2).graphml",
+    "graphs_parsed": 1,
+    "details": [
+      {
+        "graphml": "/mnt/data/maltego_edges (2).graphml",
+        "is_directed": true,
+        "num_nodes": 30,
+        "num_edges": 51,
+        "density": 0.05862068965517241,
+        "weak_components_count": 1,
+        "largest_weak_component_size": 30,
+        "strong_components_count": 25,
+        "largest_strong_component_size": 2,
+        "nodes_csv": "/mnt/data/maltego_analysis/maltego_edges (2)_maltego_edges (2)_nodes.csv",
+        "edges_csv": "/mnt/data/maltego_analysis/maltego_edges (2)_maltego_edges (2)_edges.csv",
+        "degree_distribution_png": "/mnt/data/maltego_analysis/maltego_edges (2)_maltego_edges (2)_degree_distribution.png",
+        "network_png": "/mnt/data/maltego_analysis/maltego_edges (2)_maltego_edges (2)_network.png",
+        "top_nodes_preview": {
+          "by_degree": [
+            {
+              "graph": "maltego_edges (2).graphml",
+              "id": "n4",
+              "degree_centrality": 0.20689655172413793,
+              "betweenness": 0.0332512315270936,
+              "closeness": 0.14364532019704432,
+              "pagerank": 0.03320030352651715,
+              "community": 1
+            },
+            {
+              "graph": "maltego_edges (2).graphml",
+              "id": "n8",
+              "degree_centrality": 0.20689655172413793,
+              "betweenness": 0.0332512315270936,
+              "closeness": 0.14364532019704432,
+              "pagerank": 0.03320030352651715,
+              "community": 1
+            },
+            {
+              "graph": "maltego_edges (2).graphml",
+              "id": "n13",
+              "degree_centrality": 0.20689655172413793,
+              "betweenness": 0.0665024630541872,
+              "closeness": 0.14464244387873176,
+              "pagerank": 0.03316180742859805,
+              "community": 1
+            },
+            {
+              "graph": "maltego_edges (2).graphml",
+              "id": "n14",
+              "degree_centrality": 0.20689655172413793,
+              "betweenness": 0.0665024630541872,
+              "closeness": 0.14464244387873176,
+              "pagerank": 0.03316180742859805,
+              "community": 1
+            },
+            {
+              "graph": "maltego_edges (2).graphml",
+              "id": "n2",
+              "degree_centrality": 0.1724137931034483,
+              "betweenness": 0.19950738916256158,
+              "closeness": 0.14387633769322233,
+              "pagerank": 0.040365145488281254,
+              "community": 0
+            }
+          ],
+          "by_betweenness": [
+            {
+              "graph": "maltego_edges (2).graphml",
+              "id": "n6",
+              "degree_centrality": 0.13793103448275862,
+              "betweenness": 0.2327586206896552,
+              "closeness": 0.17028522775649213,
+              "pagerank": 0.045969729294096054,
+              "community": 0
+            },
+            {
+              "graph": "maltego_edges (2).graphml",
+              "id": "n24",
+              "degree_centrality": 0.1724137931034483,
+              "betweenness": 0.21059113300492613,
+              "closeness": 0.19157088122605367,
+              "pagerank": 0.041606053515625005,
+              "community": 2
+            },
+            {
+              "graph": "maltego_edges (2).graphml",
+              "id": "n21",
+              "degree_centrality": 0.10344827586206896,
+              "betweenness": 0.20689655172413796,
+              "closeness": 0.14908722109533468,
+              "pagerank": 0.044074269899981644,
+              "community": 1
+            },
+            {
+              "graph": "maltego_edges (2).graphml",
+              "id": "n2",
+              "degree_centrality": 0.1724137931034483,
+              "betweenness": 0.19950738916256158,
+              "closeness": 0.14387633769322233,
+              "pagerank": 0.040365145488281254,
+              "community": 0
+            },
+            {
+              "graph": "maltego_edges (2).graphml",
+              "id": "n3",
+              "degree_centrality": 0.10344827586206896,
+              "betweenness": 0.10098522167487685,
+              "closeness": 0.1315020455873758,
+              "pagerank": 0.02849179396058133,
+              "community": 0
+            }
+          ],
+          "by_pagerank": [
+            {
+              "graph": "maltego_edges (2).graphml",
+              "id": "n12",
+              "degree_centrality": 0.13793103448275862,
+              "betweenness": 0.0,
+              "closeness": 0.14285714285714285,
+              "pagerank": 0.15872950970452865,
+              "community": 1
+            },
+            {
+              "graph": "maltego_edges (2).graphml",
+              "id": "n16",
+              "degree_centrality": 0.13793103448275862,
+              "betweenness": 0.0,
+              "closeness": 0.14285714285714285,
+              "pagerank": 0.15872950970452865,
+              "community": 1
+            },
+            {
+              "graph": "maltego_edges (2).graphml",
+              "id": "n6",
+              "degree_centrality": 0.13793103448275862,
+              "betweenness": 0.2327586206896552,
+              "closeness": 0.17028522775649213,
+              "pagerank": 0.045969729294096054,
+              "community": 0
+            },
+            {
+              "graph": "maltego_edges (2).graphml",
+              "id": "n21",
+              "degree_centrality": 0.10344827586206896,
+              "betweenness": 0.20689655172413796,
+              "closeness": 0.14908722109533468,
+              "pagerank": 0.044074269899981644,
+              "community": 1
+            },
+            {
+              "graph": "maltego_edges (2).graphml",
+              "id": "n19",
+              "degree_centrality": 0.13793103448275862,
+              "betweenness": 0.07512315270935963,
+              "closeness": 0.19759168035030103,
+              "pagerank": 0.042438310277108746,
+              "community": 0
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "file": "PCAP_Deep_Dive.mtz",
+    "graphs_parsed": 0,
+    "details": []
+  },
+  {
+    "file": "pcap_graph.mtgx",
+    "graphs_parsed": 0,
+    "details": []
+  }
+]
